@@ -1,0 +1,21 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "",
+    "version": "v1alpha3"
+  },
+  "components": {
+    "schemas": {
+      "istio.networking.v1alpha3.KubernetesGateway": {
+        "description": "KubernetesGateway defines the Kubernetes gateway API",
+        "type": "object",
+        "properties": {
+          "class": {
+            "type": "string",
+            "format": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+// Copyright 2018 Istio Authors
+//
+//   Licensed under the Apache License, Version 2.0 (the "License");
+//   you may not use this file except in compliance with the License.
+//   You may obtain a copy of the License at
+//
+//       http://www.apache.org/licenses/LICENSE-2.0
+//
+//   Unless required by applicable law or agreed to in writing, software
+//   distributed under the License is distributed on an "AS IS" BASIS,
+//   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//   See the License for the specific language governing permissions and
+//   limitations under the License.
+syntax = "proto3";
+
+import "google/api/field_behavior.proto";
+import "google/protobuf/duration.proto";
+import "gogoproto/gogo.proto";
+
+// $schema: istio.networking.v1alpha3.KubernetesGateway
+// $title: Kubernetes Gateway
+// $description: Alpha
+// $location: https://istio.io/docs/reference/config/networking/kubernetes-gateway.html
+package istio.networking.v1alpha3;
+
+option go_package = "istio.io/api/networking/v1alpha3";
+
+// KubernetesGateway defines the Kubernetes gateway API
+//
+// <!-- go code generation tags
+// +kubetype-gen
+// +kubetype-gen:groupVersion=networking.istio.io/v1alpha3
+// +genclient
+// +k8s:deepcopy-gen=true
+// -->
+message KubernetesGateway {
+    string class = 1;
+}
