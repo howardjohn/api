@@ -13,6 +13,39 @@
           "class": {
             "type": "string",
             "format": "string"
+          },
+          "listeners": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/istio.networking.v1alpha3.KubernetesGatewayListener"
+            }
+          }
+        }
+      },
+      "istio.networking.v1alpha3.KubernetesGatewayListener": {
+        "type": "object",
+        "properties": {
+          "port": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "address": {
+            "type": "string",
+            "format": "string"
+          },
+          "protocols": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "string"
+            }
+          },
+          "routes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "string"
+            }
           }
         }
       }

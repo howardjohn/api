@@ -1,0 +1,52 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "",
+    "version": "v1alpha3"
+  },
+  "components": {
+    "schemas": {
+      "istio.networking.v1alpha3.KubernetesHTTPRoute": {
+        "description": "KubernetesHTTPRoute defines the Kubernetes HTTPRoute API",
+        "type": "object",
+        "properties": {
+          "host": {
+            "type": "string",
+            "format": "string"
+          },
+          "rules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/istio.networking.v1alpha3.KubernetesHTTPRouteRule"
+            }
+          }
+        }
+      },
+      "istio.networking.v1alpha3.KubernetesHTTPRouteRule": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "format": "string"
+          },
+          "backend": {
+            "$ref": "#/components/schemas/istio.networking.v1alpha3.KubernetesHTTPRouteActionBackend"
+          }
+        }
+      },
+      "istio.networking.v1alpha3.KubernetesHTTPRouteActionBackend": {
+        "type": "object",
+        "properties": {
+          "port": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "service": {
+            "type": "string",
+            "format": "string"
+          }
+        }
+      }
+    }
+  }
+}

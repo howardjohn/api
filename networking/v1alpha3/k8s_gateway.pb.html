@@ -2,7 +2,7 @@
 title: istio.networking.v1alpha3
 layout: protoc-gen-docs
 generator: protoc-gen-docs
-number_of_entries: 1
+number_of_entries: 2
 ---
 <h2 id="KubernetesGateway">KubernetesGateway</h2>
 <section>
@@ -21,6 +21,66 @@ number_of_entries: 1
 <tr id="KubernetesGateway-class">
 <td><code>class</code></td>
 <td><code>string</code></td>
+<td>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="KubernetesGateway-listeners">
+<td><code>listeners</code></td>
+<td><code><a href="https://istio.io/docs/reference/config/networking/gateway.html#KubernetesGatewayListener">KubernetesGatewayListener[]</a></code></td>
+<td>
+</td>
+<td>
+No
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<h2 id="KubernetesGatewayListener">KubernetesGatewayListener</h2>
+<section>
+<table class="message-fields">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr id="KubernetesGatewayListener-address">
+<td><code>address</code></td>
+<td><code>string</code></td>
+<td>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="KubernetesGatewayListener-port">
+<td><code>port</code></td>
+<td><code>int32</code></td>
+<td>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="KubernetesGatewayListener-protocols">
+<td><code>protocols</code></td>
+<td><code>string[]</code></td>
+<td>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="KubernetesGatewayListener-routes">
+<td><code>routes</code></td>
+<td><code>string[]</code></td>
 <td>
 </td>
 <td>

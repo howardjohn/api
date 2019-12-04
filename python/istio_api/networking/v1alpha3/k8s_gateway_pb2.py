@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='istio.networking.v1alpha3',
   syntax='proto3',
   serialized_options=_b('Z istio.io/api/networking/v1alpha3'),
-  serialized_pb=_b('\n%networking/v1alpha3/k8s_gateway.proto\x12\x19istio.networking.v1alpha3\x1a\x1fgoogle/api/field_behavior.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x14gogoproto/gogo.proto\"\"\n\x11KubernetesGateway\x12\r\n\x05\x63lass\x18\x01 \x01(\tB\"Z istio.io/api/networking/v1alpha3b\x06proto3')
+  serialized_pb=_b('\n%networking/v1alpha3/k8s_gateway.proto\x12\x19istio.networking.v1alpha3\x1a\x1fgoogle/api/field_behavior.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x14gogoproto/gogo.proto\"k\n\x11KubernetesGateway\x12\r\n\x05\x63lass\x18\x01 \x01(\t\x12G\n\tlisteners\x18\x02 \x03(\x0b\x32\x34.istio.networking.v1alpha3.KubernetesGatewayListener\"]\n\x19KubernetesGatewayListener\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\x12\x11\n\tprotocols\x18\x03 \x03(\t\x12\x0e\n\x06routes\x18\x04 \x03(\tB\"Z istio.io/api/networking/v1alpha3b\x06proto3')
   ,
   dependencies=[google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,google_dot_protobuf_dot_duration__pb2.DESCRIPTOR,gogoproto_dot_gogo__pb2.DESCRIPTOR,])
 
@@ -44,6 +44,13 @@ _KUBERNETESGATEWAY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='listeners', full_name='istio.networking.v1alpha3.KubernetesGateway.listeners', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -57,10 +64,64 @@ _KUBERNETESGATEWAY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=155,
-  serialized_end=189,
+  serialized_end=262,
 )
 
+
+_KUBERNETESGATEWAYLISTENER = _descriptor.Descriptor(
+  name='KubernetesGatewayListener',
+  full_name='istio.networking.v1alpha3.KubernetesGatewayListener',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='address', full_name='istio.networking.v1alpha3.KubernetesGatewayListener.address', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='port', full_name='istio.networking.v1alpha3.KubernetesGatewayListener.port', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='protocols', full_name='istio.networking.v1alpha3.KubernetesGatewayListener.protocols', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='routes', full_name='istio.networking.v1alpha3.KubernetesGatewayListener.routes', index=3,
+      number=4, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=264,
+  serialized_end=357,
+)
+
+_KUBERNETESGATEWAY.fields_by_name['listeners'].message_type = _KUBERNETESGATEWAYLISTENER
 DESCRIPTOR.message_types_by_name['KubernetesGateway'] = _KUBERNETESGATEWAY
+DESCRIPTOR.message_types_by_name['KubernetesGatewayListener'] = _KUBERNETESGATEWAYLISTENER
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 KubernetesGateway = _reflection.GeneratedProtocolMessageType('KubernetesGateway', (_message.Message,), {
@@ -69,6 +130,13 @@ KubernetesGateway = _reflection.GeneratedProtocolMessageType('KubernetesGateway'
   # @@protoc_insertion_point(class_scope:istio.networking.v1alpha3.KubernetesGateway)
   })
 _sym_db.RegisterMessage(KubernetesGateway)
+
+KubernetesGatewayListener = _reflection.GeneratedProtocolMessageType('KubernetesGatewayListener', (_message.Message,), {
+  'DESCRIPTOR' : _KUBERNETESGATEWAYLISTENER,
+  '__module__' : 'networking.v1alpha3.k8s_gateway_pb2'
+  # @@protoc_insertion_point(class_scope:istio.networking.v1alpha3.KubernetesGatewayListener)
+  })
+_sym_db.RegisterMessage(KubernetesGatewayListener)
 
 
 DESCRIPTOR._options = None

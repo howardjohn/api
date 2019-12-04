@@ -1,0 +1,107 @@
+---
+title: istio.networking.v1alpha3
+layout: protoc-gen-docs
+generator: protoc-gen-docs
+number_of_entries: 3
+---
+<h2 id="KubernetesHTTPRoute">KubernetesHTTPRoute</h2>
+<section>
+<p>KubernetesHTTPRoute defines the Kubernetes HTTPRoute API</p>
+
+<table class="message-fields">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr id="KubernetesHTTPRoute-host">
+<td><code>host</code></td>
+<td><code>string</code></td>
+<td>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="KubernetesHTTPRoute-rules">
+<td><code>rules</code></td>
+<td><code><a href="https://istio.io/docs/reference/config/networking/gateway.html#KubernetesHTTPRouteRule">KubernetesHTTPRouteRule[]</a></code></td>
+<td>
+</td>
+<td>
+No
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<h2 id="KubernetesHTTPRouteActionBackend">KubernetesHTTPRouteActionBackend</h2>
+<section>
+<table class="message-fields">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr id="KubernetesHTTPRouteActionBackend-service">
+<td><code>service</code></td>
+<td><code>string</code></td>
+<td>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="KubernetesHTTPRouteActionBackend-port">
+<td><code>port</code></td>
+<td><code>int32</code></td>
+<td>
+</td>
+<td>
+No
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<h2 id="KubernetesHTTPRouteRule">KubernetesHTTPRouteRule</h2>
+<section>
+<table class="message-fields">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr id="KubernetesHTTPRouteRule-path">
+<td><code>path</code></td>
+<td><code>string</code></td>
+<td>
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="KubernetesHTTPRouteRule-backend">
+<td><code>backend</code></td>
+<td><code><a href="https://istio.io/docs/reference/config/networking/gateway.html#KubernetesHTTPRouteActionBackend">KubernetesHTTPRouteActionBackend</a></code></td>
+<td>
+</td>
+<td>
+No
+</td>
+</tr>
+</tbody>
+</table>
+</section>

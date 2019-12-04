@@ -35,6 +35,17 @@ func (this *KubernetesGateway) UnmarshalJSON(b []byte) error {
 	return K8SGatewayUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
+// MarshalJSON is a custom marshaler for KubernetesGatewayListener
+func (this *KubernetesGatewayListener) MarshalJSON() ([]byte, error) {
+	str, err := K8SGatewayMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler for KubernetesGatewayListener
+func (this *KubernetesGatewayListener) UnmarshalJSON(b []byte) error {
+	return K8SGatewayUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 var (
 	K8SGatewayMarshaler   = &github_com_gogo_protobuf_jsonpb.Marshaler{}
 	K8SGatewayUnmarshaler = &github_com_gogo_protobuf_jsonpb.Unmarshaler{}
