@@ -6,8 +6,8 @@
   },
   "components": {
     "schemas": {
-      "istio.networking.v1alpha3.KubernetesHTTPRoute": {
-        "description": "KubernetesHTTPRoute defines the Kubernetes HTTPRoute API",
+      "istio.networking.v1alpha3.KubernetesHttpRoute": {
+        "description": "KubernetesHttpRoute defines the Kubernetes HttpRoute API",
         "type": "object",
         "properties": {
           "host": {
@@ -17,12 +17,12 @@
           "rules": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/istio.networking.v1alpha3.KubernetesHTTPRouteRule"
+              "$ref": "#/components/schemas/istio.networking.v1alpha3.KubernetesHttpRouteRule"
             }
           }
         }
       },
-      "istio.networking.v1alpha3.KubernetesHTTPRouteRule": {
+      "istio.networking.v1alpha3.KubernetesHttpRouteRule": {
         "type": "object",
         "properties": {
           "path": {
@@ -30,11 +30,11 @@
             "format": "string"
           },
           "backend": {
-            "$ref": "#/components/schemas/istio.networking.v1alpha3.KubernetesHTTPRouteActionBackend"
+            "$ref": "#/components/schemas/istio.networking.v1alpha3.KubernetesHttpRouteActionBackend"
           }
         }
       },
-      "istio.networking.v1alpha3.KubernetesHTTPRouteActionBackend": {
+      "istio.networking.v1alpha3.KubernetesHttpRouteActionBackend": {
         "type": "object",
         "properties": {
           "port": {

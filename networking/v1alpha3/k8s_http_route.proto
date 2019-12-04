@@ -13,15 +13,15 @@
 //   limitations under the License.
 syntax = "proto3";
 
-// $schema: istio.networking.v1alpha3.KubernetesHTTPRoute
-// $title: Kubernetes HTTPRoute
+// $schema: istio.networking.v1alpha3.KubernetesHttpRoute
+// $title: Kubernetes HttpRoute
 // $description: Alpha
 // $location: https://istio.io/docs/reference/config/networking/kubernetes-httproute.html
 package istio.networking.v1alpha3;
 
 option go_package = "istio.io/api/networking/v1alpha3";
 
-// KubernetesHTTPRoute defines the Kubernetes HTTPRoute API
+// KubernetesHttpRoute defines the Kubernetes HttpRoute API
 //
 // <!-- go code generation tags
 // +kubetype-gen
@@ -29,17 +29,17 @@ option go_package = "istio.io/api/networking/v1alpha3";
 // +genclient
 // +k8s:deepcopy-gen=true
 // -->
-message KubernetesHTTPRoute {
+message KubernetesHttpRoute {
     string host = 1;
-    repeated KubernetesHTTPRouteRule rules = 2;
+    repeated KubernetesHttpRouteRule rules = 2;
 }
 
-message KubernetesHTTPRouteRule {
+message KubernetesHttpRouteRule {
     string path = 1;
-    KubernetesHTTPRouteActionBackend backend = 2;
+    KubernetesHttpRouteActionBackend backend = 2;
 }
 
-message KubernetesHTTPRouteActionBackend {
+message KubernetesHttpRouteActionBackend {
     string service = 1;
     int32 port = 2;
 }

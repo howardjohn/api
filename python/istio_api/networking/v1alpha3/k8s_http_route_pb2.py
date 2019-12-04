@@ -20,28 +20,28 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='istio.networking.v1alpha3',
   syntax='proto3',
   serialized_options=_b('Z istio.io/api/networking/v1alpha3'),
-  serialized_pb=_b('\n(networking/v1alpha3/k8s_http_route.proto\x12\x19istio.networking.v1alpha3\"f\n\x13KubernetesHTTPRoute\x12\x0c\n\x04host\x18\x01 \x01(\t\x12\x41\n\x05rules\x18\x02 \x03(\x0b\x32\x32.istio.networking.v1alpha3.KubernetesHTTPRouteRule\"u\n\x17KubernetesHTTPRouteRule\x12\x0c\n\x04path\x18\x01 \x01(\t\x12L\n\x07\x62\x61\x63kend\x18\x02 \x01(\x0b\x32;.istio.networking.v1alpha3.KubernetesHTTPRouteActionBackend\"A\n KubernetesHTTPRouteActionBackend\x12\x0f\n\x07service\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\x42\"Z istio.io/api/networking/v1alpha3b\x06proto3')
+  serialized_pb=_b('\n(networking/v1alpha3/k8s_http_route.proto\x12\x19istio.networking.v1alpha3\"f\n\x13KubernetesHttpRoute\x12\x0c\n\x04host\x18\x01 \x01(\t\x12\x41\n\x05rules\x18\x02 \x03(\x0b\x32\x32.istio.networking.v1alpha3.KubernetesHttpRouteRule\"u\n\x17KubernetesHttpRouteRule\x12\x0c\n\x04path\x18\x01 \x01(\t\x12L\n\x07\x62\x61\x63kend\x18\x02 \x01(\x0b\x32;.istio.networking.v1alpha3.KubernetesHttpRouteActionBackend\"A\n KubernetesHttpRouteActionBackend\x12\x0f\n\x07service\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\x42\"Z istio.io/api/networking/v1alpha3b\x06proto3')
 )
 
 
 
 
 _KUBERNETESHTTPROUTE = _descriptor.Descriptor(
-  name='KubernetesHTTPRoute',
-  full_name='istio.networking.v1alpha3.KubernetesHTTPRoute',
+  name='KubernetesHttpRoute',
+  full_name='istio.networking.v1alpha3.KubernetesHttpRoute',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='host', full_name='istio.networking.v1alpha3.KubernetesHTTPRoute.host', index=0,
+      name='host', full_name='istio.networking.v1alpha3.KubernetesHttpRoute.host', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='rules', full_name='istio.networking.v1alpha3.KubernetesHTTPRoute.rules', index=1,
+      name='rules', full_name='istio.networking.v1alpha3.KubernetesHttpRoute.rules', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -65,21 +65,21 @@ _KUBERNETESHTTPROUTE = _descriptor.Descriptor(
 
 
 _KUBERNETESHTTPROUTERULE = _descriptor.Descriptor(
-  name='KubernetesHTTPRouteRule',
-  full_name='istio.networking.v1alpha3.KubernetesHTTPRouteRule',
+  name='KubernetesHttpRouteRule',
+  full_name='istio.networking.v1alpha3.KubernetesHttpRouteRule',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='path', full_name='istio.networking.v1alpha3.KubernetesHTTPRouteRule.path', index=0,
+      name='path', full_name='istio.networking.v1alpha3.KubernetesHttpRouteRule.path', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='backend', full_name='istio.networking.v1alpha3.KubernetesHTTPRouteRule.backend', index=1,
+      name='backend', full_name='istio.networking.v1alpha3.KubernetesHttpRouteRule.backend', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -103,21 +103,21 @@ _KUBERNETESHTTPROUTERULE = _descriptor.Descriptor(
 
 
 _KUBERNETESHTTPROUTEACTIONBACKEND = _descriptor.Descriptor(
-  name='KubernetesHTTPRouteActionBackend',
-  full_name='istio.networking.v1alpha3.KubernetesHTTPRouteActionBackend',
+  name='KubernetesHttpRouteActionBackend',
+  full_name='istio.networking.v1alpha3.KubernetesHttpRouteActionBackend',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='service', full_name='istio.networking.v1alpha3.KubernetesHTTPRouteActionBackend.service', index=0,
+      name='service', full_name='istio.networking.v1alpha3.KubernetesHttpRouteActionBackend.service', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='port', full_name='istio.networking.v1alpha3.KubernetesHTTPRouteActionBackend.port', index=1,
+      name='port', full_name='istio.networking.v1alpha3.KubernetesHttpRouteActionBackend.port', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -141,31 +141,31 @@ _KUBERNETESHTTPROUTEACTIONBACKEND = _descriptor.Descriptor(
 
 _KUBERNETESHTTPROUTE.fields_by_name['rules'].message_type = _KUBERNETESHTTPROUTERULE
 _KUBERNETESHTTPROUTERULE.fields_by_name['backend'].message_type = _KUBERNETESHTTPROUTEACTIONBACKEND
-DESCRIPTOR.message_types_by_name['KubernetesHTTPRoute'] = _KUBERNETESHTTPROUTE
-DESCRIPTOR.message_types_by_name['KubernetesHTTPRouteRule'] = _KUBERNETESHTTPROUTERULE
-DESCRIPTOR.message_types_by_name['KubernetesHTTPRouteActionBackend'] = _KUBERNETESHTTPROUTEACTIONBACKEND
+DESCRIPTOR.message_types_by_name['KubernetesHttpRoute'] = _KUBERNETESHTTPROUTE
+DESCRIPTOR.message_types_by_name['KubernetesHttpRouteRule'] = _KUBERNETESHTTPROUTERULE
+DESCRIPTOR.message_types_by_name['KubernetesHttpRouteActionBackend'] = _KUBERNETESHTTPROUTEACTIONBACKEND
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-KubernetesHTTPRoute = _reflection.GeneratedProtocolMessageType('KubernetesHTTPRoute', (_message.Message,), {
+KubernetesHttpRoute = _reflection.GeneratedProtocolMessageType('KubernetesHttpRoute', (_message.Message,), {
   'DESCRIPTOR' : _KUBERNETESHTTPROUTE,
   '__module__' : 'networking.v1alpha3.k8s_http_route_pb2'
-  # @@protoc_insertion_point(class_scope:istio.networking.v1alpha3.KubernetesHTTPRoute)
+  # @@protoc_insertion_point(class_scope:istio.networking.v1alpha3.KubernetesHttpRoute)
   })
-_sym_db.RegisterMessage(KubernetesHTTPRoute)
+_sym_db.RegisterMessage(KubernetesHttpRoute)
 
-KubernetesHTTPRouteRule = _reflection.GeneratedProtocolMessageType('KubernetesHTTPRouteRule', (_message.Message,), {
+KubernetesHttpRouteRule = _reflection.GeneratedProtocolMessageType('KubernetesHttpRouteRule', (_message.Message,), {
   'DESCRIPTOR' : _KUBERNETESHTTPROUTERULE,
   '__module__' : 'networking.v1alpha3.k8s_http_route_pb2'
-  # @@protoc_insertion_point(class_scope:istio.networking.v1alpha3.KubernetesHTTPRouteRule)
+  # @@protoc_insertion_point(class_scope:istio.networking.v1alpha3.KubernetesHttpRouteRule)
   })
-_sym_db.RegisterMessage(KubernetesHTTPRouteRule)
+_sym_db.RegisterMessage(KubernetesHttpRouteRule)
 
-KubernetesHTTPRouteActionBackend = _reflection.GeneratedProtocolMessageType('KubernetesHTTPRouteActionBackend', (_message.Message,), {
+KubernetesHttpRouteActionBackend = _reflection.GeneratedProtocolMessageType('KubernetesHttpRouteActionBackend', (_message.Message,), {
   'DESCRIPTOR' : _KUBERNETESHTTPROUTEACTIONBACKEND,
   '__module__' : 'networking.v1alpha3.k8s_http_route_pb2'
-  # @@protoc_insertion_point(class_scope:istio.networking.v1alpha3.KubernetesHTTPRouteActionBackend)
+  # @@protoc_insertion_point(class_scope:istio.networking.v1alpha3.KubernetesHttpRouteActionBackend)
   })
-_sym_db.RegisterMessage(KubernetesHTTPRouteActionBackend)
+_sym_db.RegisterMessage(KubernetesHttpRouteActionBackend)
 
 
 DESCRIPTOR._options = None
