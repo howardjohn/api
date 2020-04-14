@@ -5,10 +5,163 @@ location: https://istio.io/docs/reference/config/istio.operator.v1alpha1.html
 layout: protoc-gen-docs
 generator: protoc-gen-docs
 weight: 20
-number_of_entries: 55
+number_of_entries: 58
 ---
 <p>Configuration affecting Istio control plane installation version and shape.</p>
 
+<h2 id="Struct">Struct</h2>
+<section>
+<p><code>Struct</code> represents a structured data value, consisting of fields
+which map to dynamically typed values. In some languages, <code>Struct</code>
+might be supported by a native representation. For example, in
+scripting languages like JS a struct is represented as an
+object. The details of that representation are described together
+with the proto support for the language.</p>
+
+<p>The JSON representation for <code>Struct</code> is JSON object.</p>
+
+<table class="message-fields">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr id="Struct-fields">
+<td><code>fields</code></td>
+<td><code>map&lt;string,&nbsp;<a href="#Value">Value</a>&gt;</code></td>
+<td>
+<p>Unordered map of dynamically typed values.</p>
+
+</td>
+<td>
+No
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<h2 id="Value">Value</h2>
+<section>
+<p><code>Value</code> represents a dynamically typed value which can be either
+null, a number, a string, a boolean, a recursive struct value, or a
+list of values. A producer of value is expected to set one of that
+variants, absence of any variant indicates an error.</p>
+
+<p>The JSON representation for <code>Value</code> is JSON value.</p>
+
+<table class="message-fields">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr id="Value-null_value" class="oneof oneof-start">
+<td><code>nullValue</code></td>
+<td><code><a href="#NullValue">NullValue (oneof)</a></code></td>
+<td>
+<p>Represents a null value.</p>
+
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="Value-number_value" class="oneof">
+<td><code>numberValue</code></td>
+<td><code>double (oneof)</code></td>
+<td>
+<p>Represents a double value.</p>
+
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="Value-string_value" class="oneof">
+<td><code>stringValue</code></td>
+<td><code>string (oneof)</code></td>
+<td>
+<p>Represents a string value.</p>
+
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="Value-bool_value" class="oneof">
+<td><code>boolValue</code></td>
+<td><code>bool (oneof)</code></td>
+<td>
+<p>Represents a boolean value.</p>
+
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="Value-struct_value" class="oneof">
+<td><code>structValue</code></td>
+<td><code><a href="#Struct">Struct (oneof)</a></code></td>
+<td>
+<p>Represents a structured value.</p>
+
+</td>
+<td>
+No
+</td>
+</tr>
+<tr id="Value-list_value" class="oneof">
+<td><code>listValue</code></td>
+<td><code><a href="#ListValue">ListValue (oneof)</a></code></td>
+<td>
+<p>Represents a repeated <code>Value</code>.</p>
+
+</td>
+<td>
+No
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<h2 id="ListValue">ListValue</h2>
+<section>
+<p><code>ListValue</code> is a wrapper around a repeated field of values.</p>
+
+<p>The JSON representation for <code>ListValue</code> is JSON array.</p>
+
+<table class="message-fields">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr id="ListValue-values">
+<td><code>values</code></td>
+<td><code><a href="#Value">Value[]</a></code></td>
+<td>
+<p>Repeated field of dynamically typed values.</p>
+
+</td>
+<td>
+No
+</td>
+</tr>
+</tbody>
+</table>
+</section>
 <h2 id="Resources">Resources</h2>
 <section>
 <p>Mirrors k8s.io.api.core.v1.ResourceRequirements for unmarshaling.</p>
@@ -633,7 +786,7 @@ No
 </tr>
 <tr id="HTTPGetAction-port">
 <td><code>port</code></td>
-<td><code><a href="#google-protobuf-Value">Value</a></code></td>
+<td><code><a href="#Value">Value</a></code></td>
 <td>
 </td>
 <td>
@@ -721,7 +874,7 @@ No
 <tbody>
 <tr id="TCPSocketAction-port">
 <td><code>port</code></td>
-<td><code><a href="#google-protobuf-Value">Value</a></code></td>
+<td><code><a href="#Value">Value</a></code></td>
 <td>
 </td>
 <td>
@@ -835,7 +988,7 @@ No
 <tbody>
 <tr id="RollingUpdateDeployment-maxUnavailable">
 <td><code>maxUnavailable</code></td>
-<td><code><a href="#google-protobuf-Value">Value</a></code></td>
+<td><code><a href="#Value">Value</a></code></td>
 <td>
 </td>
 <td>
@@ -844,7 +997,7 @@ No
 </tr>
 <tr id="RollingUpdateDeployment-maxSurge">
 <td><code>maxSurge</code></td>
-<td><code><a href="#google-protobuf-Value">Value</a></code></td>
+<td><code><a href="#Value">Value</a></code></td>
 <td>
 </td>
 <td>
@@ -1029,7 +1182,7 @@ No
 <tbody>
 <tr id="Quantity-string">
 <td><code>string</code></td>
-<td><code><a href="#google-protobuf-Value">Value</a></code></td>
+<td><code><a href="#Value">Value</a></code></td>
 <td>
 </td>
 <td>
@@ -1362,7 +1515,7 @@ No
 </tr>
 <tr id="ServicePort-targetPort">
 <td><code>targetPort</code></td>
-<td><code><a href="#google-protobuf-Value">Value</a></code></td>
+<td><code><a href="#Value">Value</a></code></td>
 <td>
 </td>
 <td>
@@ -1791,7 +1944,7 @@ No
 </tr>
 <tr id="ResourceMetricSource-targetAverageUtilization">
 <td><code>targetAverageUtilization</code></td>
-<td><code><a href="#google-protobuf-Value">Value</a></code></td>
+<td><code><a href="#Value">Value</a></code></td>
 <td>
 </td>
 <td>
@@ -1853,94 +2006,6 @@ No
 <td><code>targetAverageValue</code></td>
 <td><code><a href="#Quantity">Quantity</a></code></td>
 <td>
-</td>
-<td>
-No
-</td>
-</tr>
-</tbody>
-</table>
-</section>
-<h2 id="google-protobuf-Value">google.protobuf.Value</h2>
-<section>
-<p><code>Value</code> represents a dynamically typed value which can be either
-null, a number, a string, a boolean, a recursive struct value, or a
-list of values. A producer of value is expected to set one of that
-variants, absence of any variant indicates an error.</p>
-
-<p>The JSON representation for <code>Value</code> is JSON value.</p>
-
-<table class="message-fields">
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-</tr>
-</thead>
-<tbody>
-<tr id="google-protobuf-Value-null_value" class="oneof oneof-start">
-<td><code>nullValue</code></td>
-<td><code><a href="https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#nullvalue">NullValue (oneof)</a></code></td>
-<td>
-<p>Represents a null value.</p>
-
-</td>
-<td>
-No
-</td>
-</tr>
-<tr id="google-protobuf-Value-number_value" class="oneof">
-<td><code>numberValue</code></td>
-<td><code>double (oneof)</code></td>
-<td>
-<p>Represents a double value.</p>
-
-</td>
-<td>
-No
-</td>
-</tr>
-<tr id="google-protobuf-Value-string_value" class="oneof">
-<td><code>stringValue</code></td>
-<td><code>string (oneof)</code></td>
-<td>
-<p>Represents a string value.</p>
-
-</td>
-<td>
-No
-</td>
-</tr>
-<tr id="google-protobuf-Value-bool_value" class="oneof">
-<td><code>boolValue</code></td>
-<td><code>bool (oneof)</code></td>
-<td>
-<p>Represents a boolean value.</p>
-
-</td>
-<td>
-No
-</td>
-</tr>
-<tr id="google-protobuf-Value-struct_value" class="oneof">
-<td><code>structValue</code></td>
-<td><code><a href="https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct">Struct (oneof)</a></code></td>
-<td>
-<p>Represents a structured value.</p>
-
-</td>
-<td>
-No
-</td>
-</tr>
-<tr id="google-protobuf-Value-list_value" class="oneof">
-<td><code>listValue</code></td>
-<td><code><a href="https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#listvalue">ListValue (oneof)</a></code></td>
-<td>
-<p>Represents a repeated <code>Value</code>.</p>
-
 </td>
 <td>
 No
@@ -2151,7 +2216,7 @@ No
 </tr>
 <tr id="ComponentSpec-tag">
 <td><code>tag</code></td>
-<td><code><a href="#google-protobuf-Value">Value</a></code></td>
+<td><code><a href="#Value">Value</a></code></td>
 <td>
 <p>Tag for the component (overrides top level tag setting).</p>
 
@@ -2162,7 +2227,7 @@ No
 </tr>
 <tr id="ComponentSpec-spec">
 <td><code>spec</code></td>
-<td><code><a href="https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct">Struct</a></code></td>
+<td><code><a href="#Struct">Struct</a></code></td>
 <td>
 <p>Arbitrary install time configuration for the component.</p>
 
@@ -2223,7 +2288,7 @@ No
 </tr>
 <tr id="ExternalComponentSpec-spec">
 <td><code>spec</code></td>
-<td><code><a href="https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct">Struct</a></code></td>
+<td><code><a href="#Struct">Struct</a></code></td>
 <td>
 <p>Arbitrary install time configuration for the component.</p>
 
@@ -2339,7 +2404,7 @@ No
 </tr>
 <tr id="GatewaySpec-tag">
 <td><code>tag</code></td>
-<td><code><a href="#google-protobuf-Value">Value</a></code></td>
+<td><code><a href="#Value">Value</a></code></td>
 <td>
 <p>Tag for the component (overrides top level tag setting).</p>
 
@@ -2661,7 +2726,7 @@ No
 </tr>
 <tr id="K8sObjectOverlay-PathValue-value">
 <td><code>value</code></td>
-<td><code><a href="https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct">Struct</a></code></td>
+<td><code><a href="#Struct">Struct</a></code></td>
 <td>
 <p>Value to add, delete or replace.
 For add, the path should be a new leaf.
@@ -2802,7 +2867,7 @@ No
 </tr>
 <tr id="IstioOperatorSpec-values">
 <td><code>values</code></td>
-<td><code><a href="https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct">Struct</a></code></td>
+<td><code><a href="#Struct">Struct</a></code></td>
 <td>
 <p>Overrides for default values.yaml. This is a validated pass-through to Helm templates.
 See the Helm installation options for schema details: https://istio.io/docs/reference/config/installation-options/.
@@ -2816,7 +2881,7 @@ No
 </tr>
 <tr id="IstioOperatorSpec-unvalidated_values">
 <td><code>unvalidatedValues</code></td>
-<td><code><a href="https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct">Struct</a></code></td>
+<td><code><a href="#Struct">Struct</a></code></td>
 <td>
 <p>Unvalidated overrides for default values.yaml. Used for custom templates where new parameters are added.</p>
 
@@ -2912,6 +2977,31 @@ No
 </td>
 <td>
 No
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<h2 id="NullValue">NullValue</h2>
+<section>
+<p><code>NullValue</code> is a singleton enumeration to represent the null value for the
+<code>Value</code> type union.</p>
+
+<p>The JSON representation for <code>NullValue</code> is JSON <code>null</code>.</p>
+
+<table class="enum-values">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr id="NullValue-NULL_VALUE">
+<td><code>NULL_VALUE</code></td>
+<td>
+<p>Null value.</p>
+
 </td>
 </tr>
 </tbody>
