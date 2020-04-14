@@ -14,9 +14,11 @@
 
 syntax = "proto3";
 
-import "k8s.io/apimachinery/pkg/apis/meta/v1/generated.proto";
-import "k8s.io/apimachinery/pkg/api/resource/generated.proto";
-import "k8s.io/apimachinery/pkg/util/intstr/generated.proto";
+import "google/protobuf/struct.proto";
+import "google/protobuf/any.proto";
+//import "k8s.io/apimachinery/pkg/apis/meta/v1/generated.proto";
+//import "k8s.io/apimachinery/pkg/api/resource/generated.proto";
+//import "k8s.io/apimachinery/pkg/util/intstr/generated.proto";
 
 package istio.operator.v1alpha1;
 
@@ -63,9 +65,41 @@ message PodAntiAffinity {
     repeated PodAffinityTerm requiredDuringSchedulingIgnoredDuringExecution = 1;
     repeated WeightedPodAffinityTerm preferredDuringSchedulingIgnoredDuringExecution = 2;
 }
+message LabelSelector {
+  // matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels
+  // map is equivalent to an element of matchExpressions, whose key field is "key", the
+  // operator is "In", and the values array contains only "value". The requirements are ANDed.
+  // +optional
+  map<string, string> matchLabels = 1;
+
+  // matchExpressions is a list of label selector requirements. The requirements are ANDed.
+  // +optional
+  repeated LabelSelectorRequirement matchExpressions = 2;
+}
+
+// A label selector requirement is a selector that contains values, a key, and an operator that
+// relates the key and values.
+message LabelSelectorRequirement {
+  // key is the label key that the selector applies to.
+  // +patchMergeKey=key
+  // +patchStrategy=merge
+  string key = 1;
+
+  // operator represents a key's relationship to a set of values.
+  // Valid operators are In, NotIn, Exists and DoesNotExist.
+  string operator = 2;
+
+  // values is an array of string values. If the operator is In or NotIn,
+  // the values array must be non-empty. If the operator is Exists or DoesNotExist,
+  // the values array must be empty. This array is replaced during a strategic
+  // merge patch.
+  // +optional
+  repeated string values = 3;
+}
+
 
 message PodAffinityTerm {
-    k8s.io.apimachinery.pkg.apis.meta.v1.LabelSelector labelSelector = 1;
+    LabelSelector labelSelector = 1;
     repeated string namespaces = 2;
     string topologyKey = 3;
 }
@@ -100,7 +134,7 @@ message ExecAction {
 // Mirrors k8s.io.api.core.v1.HTTPGetAction for unmarshaling.
 message HTTPGetAction {
     string path = 1;
-    TypeInterface_kubernetes port = 2;
+    google.protobuf.Value port = 2;
     string host = 3;
     string scheme = 4;
     repeated HTTPHeader httpHeaders = 5;
@@ -114,14 +148,14 @@ message HTTPHeader {
 
 // Mirrors k8s.io.api.core.v1.TCPSocketAction for unmarshaling.
 message TCPSocketAction {
-    TypeInterface_kubernetes port = 1;
+    google.protobuf.Value port = 1;
     string host = 2;
 }
 
 // Mirrors k8s.io.api.policy.v1beta1.PodDisruptionBudget for unmarshaling.
 message PodDisruptionBudgetSpec {
     uint32 minAvailable = 1;
-    k8s.io.apimachinery.pkg.apis.meta.v1.LabelSelector selector = 2;
+    LabelSelector selector = 2;
     uint32 maxUnavailable = 3;
 }
 
@@ -133,8 +167,8 @@ message DeploymentStrategy {
 
 // Mirrors k8s.io.api.apps.v1.RollingUpdateDeployment for unmarshaling.
 message RollingUpdateDeployment {
-    TypeInterface_kubernetes maxUnavailable = 1;
-    TypeInterface_kubernetes maxSurge = 2;
+    google.protobuf.Value maxUnavailable = 1;
+    google.protobuf.Value maxSurge = 2;
 }
 
 message ObjectMeta {
@@ -160,11 +194,13 @@ message ObjectFieldSelector {
   string apiVersion = 1;
   string fieldPath = 2;
 }
-
+message Quantity {
+  google.protobuf.Value string = 1;
+}
 message ResourceFieldSelector {
   string containerName = 1;
   string resource = 2;
-  k8s.io.apimachinery.pkg.api.resource.Quantity divisor = 3;
+  Quantity divisor = 3;
 }
 
 message ConfigMapKeySelector {
@@ -204,7 +240,7 @@ message ServicePort {
   string name = 1;
   string protocol = 2;
   int32 port = 3;
-  TypeInterface_kubernetes targetPort = 4;
+  google.protobuf.Value targetPort = 4;
   int32 nodePort = 5;
 }
 message SessionAffinityConfig {
@@ -238,32 +274,57 @@ message MetricSpec {
 message ObjectMetricSource {
     CrossVersionObjectReference target = 1;
     string metricName = 2;
-    k8s.io.apimachinery.pkg.api.resource.Quantity targetValue = 3;
-    k8s.io.apimachinery.pkg.apis.meta.v1.LabelSelector selector = 4;
-    k8s.io.apimachinery.pkg.api.resource.Quantity averageValue = 5;
+    Quantity targetValue = 3;
+    LabelSelector selector = 4;
+    Quantity averageValue = 5;
+}
+message Toleration {
+  // Key is the taint key that the toleration applies to. Empty means match all taint keys.
+  // If the key is empty, operator must be Exists; this combination means to match all values and all keys.
+  // +optional
+  string key = 1;
+
+  // Operator represents a key's relationship to the value.
+  // Valid operators are Exists and Equal. Defaults to Equal.
+  // Exists is equivalent to wildcard for value, so that a pod can
+  // tolerate all taints of a particular category.
+  // +optional
+  string operator = 2;
+
+  // Value is the taint value the toleration matches to.
+  // If the operator is Exists, the value should be empty, otherwise just a regular string.
+  // +optional
+  string value = 3;
+
+  // Effect indicates the taint effect to match. Empty means match all taint effects.
+  // When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.
+  // +optional
+  string effect = 4;
+
+  // TolerationSeconds represents the period of time the toleration (which must be
+  // of effect NoExecute, otherwise this field is ignored) tolerates the taint. By default,
+  // it is not set, which means tolerate the taint forever (do not evict). Zero and
+  // negative values will be treated as 0 (evict immediately) by the system.
+  // +optional
+  int64 tolerationSeconds = 5;
 }
 
 message PodsMetricSource {
     string metricName = 1;
-    k8s.io.apimachinery.pkg.api.resource.Quantity targetAverageValue = 2;
-    k8s.io.apimachinery.pkg.apis.meta.v1.LabelSelector selector = 3;
+    Quantity targetAverageValue = 2;
+    LabelSelector selector = 3;
 }
 
 message ResourceMetricSource {
     string name = 1;
-    TypeInterface_kubernetes targetAverageUtilization = 2;
-    k8s.io.apimachinery.pkg.api.resource.Quantity targetAverageValue = 3;
+    google.protobuf.Value targetAverageUtilization = 2;
+    Quantity targetAverageValue = 3;
 }
 
 message ExternalMetricSource {
     string metricName = 1;
-    k8s.io.apimachinery.pkg.apis.meta.v1.LabelSelector metricSelector = 2;
-    k8s.io.apimachinery.pkg.api.resource.Quantity targetValue = 3;
-    k8s.io.apimachinery.pkg.api.resource.Quantity targetAverageValue = 4;
+    LabelSelector metricSelector = 2;
+    Quantity targetValue = 3;
+    Quantity targetAverageValue = 4;
 }
 
-// GOTYPE: *IntOrStringForPB
-message TypeIntOrStringForPB {}
-
-// GOTYPE: interface{}
-message TypeInterface_kubernetes {}

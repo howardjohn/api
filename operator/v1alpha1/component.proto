@@ -15,7 +15,8 @@
 syntax = "proto3";
 
 import "google/protobuf/any.proto";
-import "k8s.io/api/core/v1/generated.proto";
+import "google/protobuf/struct.proto";
+import "google/protobuf/wrappers.proto";
 import "operator/v1alpha1/kubernetes.proto";
 
 package istio.operator.v1alpha1;
@@ -42,22 +43,22 @@ message IstioComponentSetSpec {
 // Configuration for base component.
 message BaseComponentSpec {
     // Selects whether this component is installed.
-    TypeBoolValueForPB enabled = 1;
+    google.protobuf.BoolValue enabled = 1;
 }
 
 // Configuration for internal components.
 message ComponentSpec {
     // Selects whether this component is installed.
-    TypeBoolValueForPB enabled = 1;
+    google.protobuf.BoolValue enabled = 1;
     // Namespace for the component.
     string namespace = 2;
     // Hub for the component (overrides top level hub setting).
     string hub = 10;
     // Tag for the component (overrides top level tag setting).
-    TypeInterface tag = 11;
+    google.protobuf.Value tag = 11;
 
     // Arbitrary install time configuration for the component.
-    TypeInterface spec = 30;
+    google.protobuf.Struct spec = 30;
 
     // Kubernetes resource spec.
     KubernetesResourcesSpec k8s = 50;
@@ -66,12 +67,12 @@ message ComponentSpec {
 // Configuration for external components.
 message ExternalComponentSpec {
     // Selects whether this component is installed.
-    TypeBoolValueForPB enabled = 1;
+    google.protobuf.BoolValue enabled = 1;
     // Namespace for the component.
     string namespace = 2;
 
     // Arbitrary install time configuration for the component.
-    TypeInterface spec = 10;
+    google.protobuf.Struct spec = 10;
 
     // Chart path for addon components.
     string chart_path = 30;
@@ -85,7 +86,7 @@ message ExternalComponentSpec {
 // Configuration for gateways.
 message GatewaySpec {
     // Selects whether this gateway is installed.
-    TypeBoolValueForPB enabled = 1;
+    google.protobuf.BoolValue enabled = 1;
     // Namespace for the gateway.
     string namespace = 2;
     // Name for the gateway.
@@ -96,7 +97,7 @@ message GatewaySpec {
     // Hub for the component (overrides top level hub setting).
     string hub = 10;
     // Tag for the component (overrides top level tag setting).
-    TypeInterface tag = 11;
+    google.protobuf.Value tag = 11;
 
     // Kubernetes resource spec.
     KubernetesResourcesSpec k8s = 50;
@@ -146,7 +147,7 @@ message KubernetesResourcesSpec {
     DeploymentStrategy strategy = 13;
     // k8s toleration
     // [https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
-    repeated k8s.io.api.core.v1.Toleration tolerations = 14;
+    repeated Toleration tolerations = 14;
     // k8s service annotations.
     // [https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
     map<string, string> service_annotations = 15;
@@ -168,7 +169,7 @@ message K8sObjectOverlay {
         // For delete, value should be unset.
         // For replace, path should reference an existing node.
         // All values are strings but are converted into appropriate type based on schema.
-        TypeInterface value = 2;
+        google.protobuf.Struct value = 2;
     }
     // Resource API version.
     string api_version = 1;
@@ -181,13 +182,3 @@ message K8sObjectOverlay {
     // List of patches to apply to resource.
     repeated PathValue patches = 4;
 }
-
-
-// GOTYPE: map[string]interface{}
-message TypeMapStringInterface {}
-
-// GOTYPE: interface{}
-message TypeInterface {}
-
-// GOTYPE: *BoolValueForPB
-message TypeBoolValueForPB {}
