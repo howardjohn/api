@@ -155,7 +155,7 @@ import (
 	bytes "bytes"
 	fmt "fmt"
 	github_com_gogo_protobuf_jsonpb "github.com/golang/protobuf/jsonpb"
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/golang/protobuf/proto"
 	_ "github.com/golang/protobuf/ptypes/duration"
 	_ "github.com/golang/protobuf/ptypes/wrappers"
 	_ "google.golang.org/genproto/googleapis/api/annotations"

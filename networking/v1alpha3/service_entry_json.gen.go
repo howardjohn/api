@@ -753,11 +753,10 @@ package v1alpha3
 import (
 	bytes "bytes"
 	fmt "fmt"
-	math "math"
-
-	proto "github.com/gogo/protobuf/proto"
 	github_com_gogo_protobuf_jsonpb "github.com/golang/protobuf/jsonpb"
+	proto "github.com/golang/protobuf/proto"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
+	math "math"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

@@ -77,6 +77,7 @@ var (
 
 //nolint: gocognit
 func main() {
+	return
 	var filePath string
 
 	flag.StringVar(&filePath, "f", "", "path to input file")

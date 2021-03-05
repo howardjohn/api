@@ -7,7 +7,7 @@ import (
 	bytes "bytes"
 	fmt "fmt"
 	github_com_gogo_protobuf_jsonpb "github.com/golang/protobuf/jsonpb"
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/golang/protobuf/proto"
 	_ "istio.io/api/type/v1beta1"
 	math "math"
 )

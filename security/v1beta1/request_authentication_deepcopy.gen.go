@@ -5,7 +5,7 @@ package v1beta1
 
 import (
 	fmt "fmt"
-	proto "github.com/gogo/protobuf/proto"
+	proto "github.com/golang/protobuf/proto"
 	_ "istio.io/api/type/v1beta1"
 	math "math"
 )
