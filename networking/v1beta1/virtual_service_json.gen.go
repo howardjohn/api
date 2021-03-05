@@ -154,7 +154,7 @@ package v1beta1
 import (
 	bytes "bytes"
 	fmt "fmt"
-	github_com_gogo_protobuf_jsonpb "github.com/gogo/protobuf/jsonpb"
+	github_com_gogo_protobuf_jsonpb "github.com/golang/protobuf/jsonpb"
 	proto "github.com/gogo/protobuf/proto"
 	_ "github.com/golang/protobuf/ptypes/duration"
 	_ "github.com/golang/protobuf/ptypes/wrappers"

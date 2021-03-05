@@ -353,7 +353,7 @@ package v1alpha3
 import (
 	bytes "bytes"
 	fmt "fmt"
-	github_com_gogo_protobuf_jsonpb "github.com/gogo/protobuf/jsonpb"
+	github_com_gogo_protobuf_jsonpb "github.com/golang/protobuf/jsonpb"
 	proto "github.com/gogo/protobuf/proto"
 	_ "github.com/golang/protobuf/ptypes/struct"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
