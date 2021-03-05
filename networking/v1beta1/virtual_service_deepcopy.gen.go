@@ -154,8 +154,9 @@ package v1beta1
 import (
 	fmt "fmt"
 	proto "github.com/gogo/protobuf/proto"
-	_ "github.com/gogo/protobuf/types"
-	_ "istio.io/gogo-genproto/googleapis/google/api"
+	_ "github.com/golang/protobuf/ptypes/duration"
+	_ "github.com/golang/protobuf/ptypes/wrappers"
+	_ "google.golang.org/genproto/googleapis/api/annotations"
 	math "math"
 )
 
