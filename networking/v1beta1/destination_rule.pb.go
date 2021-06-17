@@ -907,6 +907,10 @@ func (*LoadBalancerSettings) XXX_OneofWrappers() []interface{} {
 // connections. The affinity to a particular destination host will be
 // lost when one or more hosts are added/removed from the destination
 // service.
+//
+// Note that for multi-network deployments, the load balancing will only ensure requests
+// are routed towards a consistent gateway. Requests from the gateway are passed through as-is,
+// and may be routed to any pod.
 type LoadBalancerSettings_ConsistentHashLB struct {
 	// The hash key to use.
 	//
