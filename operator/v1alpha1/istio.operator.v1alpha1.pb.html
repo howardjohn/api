@@ -3215,7 +3215,6 @@ No
 Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container&rsquo;s environment.
 Defaults to &ldquo;&rdquo; (volume&rsquo;s root).
 SubPathExpr and SubPath are mutually exclusive.
-This field is beta in 1.15.
 +optional</p>
 
 </td>
@@ -3230,7 +3229,8 @@ No
 <section>
 <p>A label selector is a label query over a set of resources. The result of matchLabels and
 matchExpressions are ANDed. An empty label selector matches all objects. A null
-label selector matches no objects.</p>
+label selector matches no objects.
++structType=atomic</p>
 
 <table class="message-fields">
 <thead>
