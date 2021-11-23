@@ -21,17 +21,8 @@ package v1alpha1
 
 import (
 	bytes "bytes"
-	fmt "fmt"
-	math "math"
-
-	github_com_golang_protobuf_jsonpb "github.com/gogo/protobuf/jsonpb"
-	proto "github.com/gogo/protobuf/proto"
+	github_com_golang_protobuf_jsonpb "github.com/golang/protobuf/jsonpb"
 )
-
-// Reference imports to suppress errors if they are not otherwise used.
-var _ = proto.Marshal
-var _ = fmt.Errorf
-var _ = math.Inf
 
 // MarshalJSON is a custom marshaler for IstioOperatorSpec
 func (this *IstioOperatorSpec) MarshalJSON() ([]byte, error) {

@@ -20,8 +20,8 @@ import (
 	"encoding/json"
 	"strconv"
 
-	"github.com/gogo/protobuf/jsonpb"
-	protobuf "github.com/gogo/protobuf/types"
+	"github.com/golang/protobuf/jsonpb"
+	"google.golang.org/protobuf/types/known/wrapperspb"
 
 	"k8s.io/apimachinery/pkg/util/intstr"
 )
@@ -58,7 +58,7 @@ func FromString(val string) IntOrStringForPB {
 
 // define new type from protobuf.BoolValue to marshal/unmarshal jsonpb
 type BoolValueForPB struct {
-	protobuf.BoolValue
+	wrapperspb.BoolValue
 }
 
 // GetValue returns true if self is not nil and Value is true, or false otherwise.

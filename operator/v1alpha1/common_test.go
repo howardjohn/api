@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"testing"
 
-	protobuf "github.com/gogo/protobuf/types"
+	"github.com/golang/protobuf/ptypes/wrappers"
 	"k8s.io/apimachinery/pkg/util/intstr"
 )
 
@@ -60,13 +60,13 @@ func TestBoolValueForPB_GetValue(t *testing.T) {
 		}
 	})
 	t.Run("false value", func(t *testing.T) {
-		test = &BoolValueForPB{protobuf.BoolValue{Value: false}}
+		test = &BoolValueForPB{wrappers.BoolValue{Value: false}}
 		if test.GetValue() != false {
 			t.Fatalf("value of false BoolValueForPB should be false")
 		}
 	})
 	t.Run("true value", func(t *testing.T) {
-		test = &BoolValueForPB{protobuf.BoolValue{Value: false}}
+		test = &BoolValueForPB{wrappers.BoolValue{Value: false}}
 		if test.GetValue() != false {
 			t.Fatalf("value of true BoolValueForPB should be true")
 		}

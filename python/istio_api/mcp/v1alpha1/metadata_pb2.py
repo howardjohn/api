@@ -11,7 +11,6 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
@@ -19,11 +18,11 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='mcp/v1alpha1/metadata.proto',
   package='istio.mcp.v1alpha1',
   syntax='proto3',
-  serialized_options=b'Z\031istio.io/api/mcp/v1alpha1\250\342\036\001',
+  serialized_options=b'Z\031istio.io/api/mcp/v1alpha1',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1bmcp/v1alpha1/metadata.proto\x12\x12istio.mcp.v1alpha1\x1a\x14gogoproto/gogo.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x83\x03\n\x08Metadata\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12;\n\x0b\x63reate_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\ncreateTime\x12\x18\n\x07version\x18\x03 \x01(\tR\x07version\x12@\n\x06labels\x18\x04 \x03(\x0b\x32(.istio.mcp.v1alpha1.Metadata.LabelsEntryR\x06labels\x12O\n\x0b\x61nnotations\x18\x05 \x03(\x0b\x32-.istio.mcp.v1alpha1.Metadata.AnnotationsEntryR\x0b\x61nnotations\x1a\x39\n\x0bLabelsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01\x1a>\n\x10\x41nnotationsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01\x42\x1fZ\x19istio.io/api/mcp/v1alpha1\xa8\xe2\x1e\x01\x62\x06proto3'
+  serialized_pb=b'\n\x1bmcp/v1alpha1/metadata.proto\x12\x12istio.mcp.v1alpha1\x1a\x1fgoogle/protobuf/timestamp.proto\"\x83\x03\n\x08Metadata\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12;\n\x0b\x63reate_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\ncreateTime\x12\x18\n\x07version\x18\x03 \x01(\tR\x07version\x12@\n\x06labels\x18\x04 \x03(\x0b\x32(.istio.mcp.v1alpha1.Metadata.LabelsEntryR\x06labels\x12O\n\x0b\x61nnotations\x18\x05 \x03(\x0b\x32-.istio.mcp.v1alpha1.Metadata.AnnotationsEntryR\x0b\x61nnotations\x1a\x39\n\x0bLabelsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01\x1a>\n\x10\x41nnotationsEntry\x12\x10\n\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n\x05value\x18\x02 \x01(\tR\x05value:\x02\x38\x01\x42\x1bZ\x19istio.io/api/mcp/v1alpha1b\x06proto3'
   ,
-  dependencies=[gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
 
 
@@ -62,8 +61,8 @@ _METADATA_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=373,
-  serialized_end=430,
+  serialized_start=351,
+  serialized_end=408,
 )
 
 _METADATA_ANNOTATIONSENTRY = _descriptor.Descriptor(
@@ -100,8 +99,8 @@ _METADATA_ANNOTATIONSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=432,
-  serialized_end=494,
+  serialized_start=410,
+  serialized_end=472,
 )
 
 _METADATA = _descriptor.Descriptor(
@@ -159,8 +158,8 @@ _METADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=107,
-  serialized_end=494,
+  serialized_start=85,
+  serialized_end=472,
 )
 
 _METADATA_LABELSENTRY.containing_type = _METADATA
