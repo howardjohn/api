@@ -40,7 +40,9 @@ message WorkloadSelector {
 // a listener having a specific port.
 message PortSelector {
   // Port number
-  uint32 number = 1;
+  // +kubebuilder:validation:Minimum=1
+  // +kubebuilder:validation:Maximum=65535
+  uint32 number = 1  [(google.api.field_behavior) = REQUIRED];
 }
 
 // WorkloadMode allows selection of the role of the underlying workload in
