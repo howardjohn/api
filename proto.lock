@@ -195,26 +195,22 @@
               {
                 "id": 1,
                 "name": "exact",
-                "type": "string",
-                "oneof_parent": "match_type"
+                "type": "string"
               },
               {
                 "id": 2,
                 "name": "prefix",
-                "type": "string",
-                "oneof_parent": "match_type"
+                "type": "string"
               },
               {
                 "id": 3,
                 "name": "suffix",
-                "type": "string",
-                "oneof_parent": "match_type"
+                "type": "string"
               },
               {
                 "id": 4,
                 "name": "regex",
-                "type": "string",
-                "oneof_parent": "match_type"
+                "type": "string"
               }
             ]
           },
@@ -308,8 +304,7 @@
               {
                 "id": 1,
                 "name": "mtls",
-                "type": "MutualTls",
-                "oneof_parent": "params"
+                "type": "MutualTls"
               },
               {
                 "id": 2,
@@ -320,8 +315,7 @@
                     "name": "deprecated",
                     "value": "true"
                   }
-                ],
-                "oneof_parent": "params"
+                ]
               }
             ]
           },
@@ -437,14 +431,12 @@
               {
                 "id": 1,
                 "name": "number",
-                "type": "uint32",
-                "oneof_parent": "port"
+                "type": "uint32"
               },
               {
                 "id": 2,
                 "name": "name",
-                "type": "string",
-                "oneof_parent": "port"
+                "type": "string"
               }
             ]
           }
@@ -714,8 +706,7 @@
               {
                 "id": 7,
                 "name": "jwt_audience",
-                "type": "string",
-                "oneof_parent": "authentication"
+                "type": "string"
               }
             ]
           }
@@ -1242,20 +1233,17 @@
                   {
                     "id": 1,
                     "name": "linear_buckets",
-                    "type": "Linear",
-                    "oneof_parent": "options"
+                    "type": "Linear"
                   },
                   {
                     "id": 2,
                     "name": "exponential_buckets",
-                    "type": "Exponential",
-                    "oneof_parent": "options"
+                    "type": "Exponential"
                   },
                   {
                     "id": 3,
                     "name": "explicit_buckets",
-                    "type": "Explicit",
-                    "oneof_parent": "options"
+                    "type": "Explicit"
                   }
                 ],
                 "messages": [
@@ -1700,80 +1688,67 @@
               {
                 "id": 1,
                 "name": "dyn",
-                "type": "google.protobuf.Empty",
-                "oneof_parent": "type_kind"
+                "type": "google.protobuf.Empty"
               },
               {
                 "id": 2,
                 "name": "null",
-                "type": "google.protobuf.NullValue",
-                "oneof_parent": "type_kind"
+                "type": "google.protobuf.NullValue"
               },
               {
                 "id": 3,
                 "name": "primitive",
-                "type": "PrimitiveType",
-                "oneof_parent": "type_kind"
+                "type": "PrimitiveType"
               },
               {
                 "id": 4,
                 "name": "wrapper",
-                "type": "PrimitiveType",
-                "oneof_parent": "type_kind"
+                "type": "PrimitiveType"
               },
               {
                 "id": 5,
                 "name": "well_known",
-                "type": "WellKnownType",
-                "oneof_parent": "type_kind"
+                "type": "WellKnownType"
               },
               {
                 "id": 6,
                 "name": "list_type",
-                "type": "ListType",
-                "oneof_parent": "type_kind"
+                "type": "ListType"
               },
               {
                 "id": 7,
                 "name": "map_type",
-                "type": "MapType",
-                "oneof_parent": "type_kind"
+                "type": "MapType"
               },
               {
                 "id": 8,
                 "name": "function",
-                "type": "FunctionType",
-                "oneof_parent": "type_kind"
+                "type": "FunctionType"
               },
               {
                 "id": 9,
                 "name": "message_type",
-                "type": "string",
-                "oneof_parent": "type_kind"
+                "type": "string"
               },
               {
                 "id": 10,
                 "name": "type_param",
-                "type": "string",
-                "oneof_parent": "type_kind"
+                "type": "string"
               },
               {
                 "id": 11,
                 "name": "type",
-                "type": "Type",
-                "oneof_parent": "type_kind"
+                "type": "Type"
               },
               {
                 "id": 12,
                 "name": "error",
-                "type": "google.protobuf.Empty",
-                "oneof_parent": "type_kind"
+                "type": "google.protobuf.Empty"
               },
               {
                 "id": 14,
                 "name": "abstract_type",
-                "type": "AbstractType",
-                "oneof_parent": "type_kind"
+                "type": "AbstractType"
               }
             ],
             "messages": [
@@ -1847,14 +1822,12 @@
               {
                 "id": 2,
                 "name": "ident",
-                "type": "IdentDecl",
-                "oneof_parent": "decl_kind"
+                "type": "IdentDecl"
               },
               {
                 "id": 3,
                 "name": "function",
-                "type": "FunctionDecl",
-                "oneof_parent": "decl_kind"
+                "type": "FunctionDecl"
               }
             ],
             "messages": [
@@ -2105,14 +2078,12 @@
               {
                 "id": 1,
                 "name": "parsed_expr",
-                "type": "ParsedExpr",
-                "oneof_parent": "expr_kind"
+                "type": "ParsedExpr"
               },
               {
                 "id": 2,
                 "name": "checked_expr",
-                "type": "CheckedExpr",
-                "oneof_parent": "expr_kind"
+                "type": "CheckedExpr"
               },
               {
                 "id": 4,
@@ -2275,20 +2246,17 @@
               {
                 "id": 1,
                 "name": "value",
-                "type": "Value",
-                "oneof_parent": "kind"
+                "type": "Value"
               },
               {
                 "id": 2,
                 "name": "error",
-                "type": "ErrorSet",
-                "oneof_parent": "kind"
+                "type": "ErrorSet"
               },
               {
                 "id": 3,
                 "name": "unknown",
-                "type": "UnknownSet",
-                "oneof_parent": "kind"
+                "type": "UnknownSet"
               }
             ]
           },
@@ -2457,44 +2425,37 @@
               {
                 "id": 3,
                 "name": "const_expr",
-                "type": "Constant",
-                "oneof_parent": "expr_kind"
+                "type": "Constant"
               },
               {
                 "id": 4,
                 "name": "ident_expr",
-                "type": "Ident",
-                "oneof_parent": "expr_kind"
+                "type": "Ident"
               },
               {
                 "id": 5,
                 "name": "select_expr",
-                "type": "Select",
-                "oneof_parent": "expr_kind"
+                "type": "Select"
               },
               {
                 "id": 6,
                 "name": "call_expr",
-                "type": "Call",
-                "oneof_parent": "expr_kind"
+                "type": "Call"
               },
               {
                 "id": 7,
                 "name": "list_expr",
-                "type": "CreateList",
-                "oneof_parent": "expr_kind"
+                "type": "CreateList"
               },
               {
                 "id": 8,
                 "name": "struct_expr",
-                "type": "CreateStruct",
-                "oneof_parent": "expr_kind"
+                "type": "CreateStruct"
               },
               {
                 "id": 9,
                 "name": "comprehension_expr",
-                "type": "Comprehension",
-                "oneof_parent": "expr_kind"
+                "type": "Comprehension"
               }
             ],
             "messages": [
@@ -2587,14 +2548,12 @@
                       {
                         "id": 2,
                         "name": "field_key",
-                        "type": "string",
-                        "oneof_parent": "key_kind"
+                        "type": "string"
                       },
                       {
                         "id": 3,
                         "name": "map_key",
-                        "type": "Expr",
-                        "oneof_parent": "key_kind"
+                        "type": "Expr"
                       },
                       {
                         "id": 4,
@@ -2653,44 +2612,37 @@
               {
                 "id": 1,
                 "name": "null_value",
-                "type": "google.protobuf.NullValue",
-                "oneof_parent": "constant_kind"
+                "type": "google.protobuf.NullValue"
               },
               {
                 "id": 2,
                 "name": "bool_value",
-                "type": "bool",
-                "oneof_parent": "constant_kind"
+                "type": "bool"
               },
               {
                 "id": 3,
                 "name": "int64_value",
-                "type": "int64",
-                "oneof_parent": "constant_kind"
+                "type": "int64"
               },
               {
                 "id": 4,
                 "name": "uint64_value",
-                "type": "uint64",
-                "oneof_parent": "constant_kind"
+                "type": "uint64"
               },
               {
                 "id": 5,
                 "name": "double_value",
-                "type": "double",
-                "oneof_parent": "constant_kind"
+                "type": "double"
               },
               {
                 "id": 6,
                 "name": "string_value",
-                "type": "string",
-                "oneof_parent": "constant_kind"
+                "type": "string"
               },
               {
                 "id": 7,
                 "name": "bytes_value",
-                "type": "bytes",
-                "oneof_parent": "constant_kind"
+                "type": "bytes"
               },
               {
                 "id": 8,
@@ -2701,8 +2653,7 @@
                     "name": "deprecated",
                     "value": "true"
                   }
-                ],
-                "oneof_parent": "constant_kind"
+                ]
               },
               {
                 "id": 9,
@@ -2713,8 +2664,7 @@
                     "name": "deprecated",
                     "value": "true"
                   }
-                ],
-                "oneof_parent": "constant_kind"
+                ]
               }
             ]
           },
@@ -2823,74 +2773,62 @@
               {
                 "id": 1,
                 "name": "null_value",
-                "type": "google.protobuf.NullValue",
-                "oneof_parent": "kind"
+                "type": "google.protobuf.NullValue"
               },
               {
                 "id": 2,
                 "name": "bool_value",
-                "type": "bool",
-                "oneof_parent": "kind"
+                "type": "bool"
               },
               {
                 "id": 3,
                 "name": "int64_value",
-                "type": "int64",
-                "oneof_parent": "kind"
+                "type": "int64"
               },
               {
                 "id": 4,
                 "name": "uint64_value",
-                "type": "uint64",
-                "oneof_parent": "kind"
+                "type": "uint64"
               },
               {
                 "id": 5,
                 "name": "double_value",
-                "type": "double",
-                "oneof_parent": "kind"
+                "type": "double"
               },
               {
                 "id": 6,
                 "name": "string_value",
-                "type": "string",
-                "oneof_parent": "kind"
+                "type": "string"
               },
               {
                 "id": 7,
                 "name": "bytes_value",
-                "type": "bytes",
-                "oneof_parent": "kind"
+                "type": "bytes"
               },
               {
                 "id": 9,
                 "name": "enum_value",
-                "type": "EnumValue",
-                "oneof_parent": "kind"
+                "type": "EnumValue"
               },
               {
                 "id": 10,
                 "name": "object_value",
-                "type": "google.protobuf.Any",
-                "oneof_parent": "kind"
+                "type": "google.protobuf.Any"
               },
               {
                 "id": 11,
                 "name": "map_value",
-                "type": "MapValue",
-                "oneof_parent": "kind"
+                "type": "MapValue"
               },
               {
                 "id": 12,
                 "name": "list_value",
-                "type": "ListValue",
-                "oneof_parent": "kind"
+                "type": "ListValue"
               },
               {
                 "id": 15,
                 "name": "type_value",
-                "type": "string",
-                "oneof_parent": "kind"
+                "type": "string"
               }
             ]
           },
@@ -3009,14 +2947,12 @@
               {
                 "id": 4,
                 "name": "ident",
-                "type": "IdentDecl",
-                "oneof_parent": "kind"
+                "type": "IdentDecl"
               },
               {
                 "id": 5,
                 "name": "function",
-                "type": "FunctionDecl",
-                "oneof_parent": "kind"
+                "type": "FunctionDecl"
               }
             ]
           },
@@ -3154,20 +3090,17 @@
               {
                 "id": 1,
                 "name": "value",
-                "type": "Value",
-                "oneof_parent": "kind"
+                "type": "Value"
               },
               {
                 "id": 2,
                 "name": "error",
-                "type": "ErrorSet",
-                "oneof_parent": "kind"
+                "type": "ErrorSet"
               },
               {
                 "id": 3,
                 "name": "unknown",
-                "type": "UnknownSet",
-                "oneof_parent": "kind"
+                "type": "UnknownSet"
               }
             ]
           },
@@ -3274,44 +3207,37 @@
               {
                 "id": 3,
                 "name": "literal_expr",
-                "type": "Literal",
-                "oneof_parent": "expr_kind"
+                "type": "Literal"
               },
               {
                 "id": 4,
                 "name": "ident_expr",
-                "type": "Ident",
-                "oneof_parent": "expr_kind"
+                "type": "Ident"
               },
               {
                 "id": 5,
                 "name": "select_expr",
-                "type": "Select",
-                "oneof_parent": "expr_kind"
+                "type": "Select"
               },
               {
                 "id": 6,
                 "name": "call_expr",
-                "type": "Call",
-                "oneof_parent": "expr_kind"
+                "type": "Call"
               },
               {
                 "id": 7,
                 "name": "list_expr",
-                "type": "CreateList",
-                "oneof_parent": "expr_kind"
+                "type": "CreateList"
               },
               {
                 "id": 8,
                 "name": "struct_expr",
-                "type": "CreateStruct",
-                "oneof_parent": "expr_kind"
+                "type": "CreateStruct"
               },
               {
                 "id": 9,
                 "name": "comprehension_expr",
-                "type": "Comprehension",
-                "oneof_parent": "expr_kind"
+                "type": "Comprehension"
               }
             ],
             "messages": [
@@ -3404,14 +3330,12 @@
                       {
                         "id": 2,
                         "name": "field_key",
-                        "type": "string",
-                        "oneof_parent": "key_kind"
+                        "type": "string"
                       },
                       {
                         "id": 3,
                         "name": "map_key",
-                        "type": "Expr",
-                        "oneof_parent": "key_kind"
+                        "type": "Expr"
                       },
                       {
                         "id": 4,
@@ -3470,44 +3394,37 @@
               {
                 "id": 1,
                 "name": "null_value",
-                "type": "google.protobuf.NullValue",
-                "oneof_parent": "constant_kind"
+                "type": "google.protobuf.NullValue"
               },
               {
                 "id": 2,
                 "name": "bool_value",
-                "type": "bool",
-                "oneof_parent": "constant_kind"
+                "type": "bool"
               },
               {
                 "id": 3,
                 "name": "int64_value",
-                "type": "int64",
-                "oneof_parent": "constant_kind"
+                "type": "int64"
               },
               {
                 "id": 4,
                 "name": "uint64_value",
-                "type": "uint64",
-                "oneof_parent": "constant_kind"
+                "type": "uint64"
               },
               {
                 "id": 5,
                 "name": "double_value",
-                "type": "double",
-                "oneof_parent": "constant_kind"
+                "type": "double"
               },
               {
                 "id": 6,
                 "name": "string_value",
-                "type": "string",
-                "oneof_parent": "constant_kind"
+                "type": "string"
               },
               {
                 "id": 7,
                 "name": "bytes_value",
-                "type": "bytes",
-                "oneof_parent": "constant_kind"
+                "type": "bytes"
               }
             ]
           }
@@ -3640,74 +3557,62 @@
               {
                 "id": 1,
                 "name": "null_value",
-                "type": "google.protobuf.NullValue",
-                "oneof_parent": "kind"
+                "type": "google.protobuf.NullValue"
               },
               {
                 "id": 2,
                 "name": "bool_value",
-                "type": "bool",
-                "oneof_parent": "kind"
+                "type": "bool"
               },
               {
                 "id": 3,
                 "name": "int64_value",
-                "type": "int64",
-                "oneof_parent": "kind"
+                "type": "int64"
               },
               {
                 "id": 4,
                 "name": "uint64_value",
-                "type": "uint64",
-                "oneof_parent": "kind"
+                "type": "uint64"
               },
               {
                 "id": 5,
                 "name": "double_value",
-                "type": "double",
-                "oneof_parent": "kind"
+                "type": "double"
               },
               {
                 "id": 6,
                 "name": "string_value",
-                "type": "string",
-                "oneof_parent": "kind"
+                "type": "string"
               },
               {
                 "id": 7,
                 "name": "bytes_value",
-                "type": "bytes",
-                "oneof_parent": "kind"
+                "type": "bytes"
               },
               {
                 "id": 9,
                 "name": "enum_value",
-                "type": "EnumValue",
-                "oneof_parent": "kind"
+                "type": "EnumValue"
               },
               {
                 "id": 10,
                 "name": "object_value",
-                "type": "google.protobuf.Any",
-                "oneof_parent": "kind"
+                "type": "google.protobuf.Any"
               },
               {
                 "id": 11,
                 "name": "map_value",
-                "type": "MapValue",
-                "oneof_parent": "kind"
+                "type": "MapValue"
               },
               {
                 "id": 12,
                 "name": "list_value",
-                "type": "ListValue",
-                "oneof_parent": "kind"
+                "type": "ListValue"
               },
               {
                 "id": 15,
                 "name": "type_value",
-                "type": "string",
-                "oneof_parent": "kind"
+                "type": "string"
               }
             ]
           },
@@ -3910,38 +3815,32 @@
               {
                 "id": 2,
                 "name": "get",
-                "type": "string",
-                "oneof_parent": "pattern"
+                "type": "string"
               },
               {
                 "id": 3,
                 "name": "put",
-                "type": "string",
-                "oneof_parent": "pattern"
+                "type": "string"
               },
               {
                 "id": 4,
                 "name": "post",
-                "type": "string",
-                "oneof_parent": "pattern"
+                "type": "string"
               },
               {
                 "id": 5,
                 "name": "delete",
-                "type": "string",
-                "oneof_parent": "pattern"
+                "type": "string"
               },
               {
                 "id": 6,
                 "name": "patch",
-                "type": "string",
-                "oneof_parent": "pattern"
+                "type": "string"
               },
               {
                 "id": 8,
                 "name": "custom",
-                "type": "CustomHttpPattern",
-                "oneof_parent": "pattern"
+                "type": "CustomHttpPattern"
               },
               {
                 "id": 7,
@@ -5385,20 +5284,17 @@
               {
                 "id": 7,
                 "name": "linear_buckets",
-                "type": "LinearBuckets",
-                "oneof_parent": "bucket_option"
+                "type": "LinearBuckets"
               },
               {
                 "id": 8,
                 "name": "exponential_buckets",
-                "type": "ExponentialBuckets",
-                "oneof_parent": "bucket_option"
+                "type": "ExponentialBuckets"
               },
               {
                 "id": 9,
                 "name": "explicit_buckets",
-                "type": "ExplicitBuckets",
-                "oneof_parent": "bucket_option"
+                "type": "ExplicitBuckets"
               }
             ],
             "messages": [
@@ -5513,20 +5409,17 @@
               {
                 "id": 2,
                 "name": "proto_payload",
-                "type": "google.protobuf.Any",
-                "oneof_parent": "payload"
+                "type": "google.protobuf.Any"
               },
               {
                 "id": 3,
                 "name": "text_payload",
-                "type": "string",
-                "oneof_parent": "payload"
+                "type": "string"
               },
               {
                 "id": 6,
                 "name": "struct_payload",
-                "type": "google.protobuf.Struct",
-                "oneof_parent": "payload"
+                "type": "google.protobuf.Struct"
               }
             ],
             "maps": [
@@ -5601,32 +5494,27 @@
               {
                 "id": 4,
                 "name": "bool_value",
-                "type": "bool",
-                "oneof_parent": "value"
+                "type": "bool"
               },
               {
                 "id": 5,
                 "name": "int64_value",
-                "type": "int64",
-                "oneof_parent": "value"
+                "type": "int64"
               },
               {
                 "id": 6,
                 "name": "double_value",
-                "type": "double",
-                "oneof_parent": "value"
+                "type": "double"
               },
               {
                 "id": 7,
                 "name": "string_value",
-                "type": "string",
-                "oneof_parent": "value"
+                "type": "string"
               },
               {
                 "id": 8,
                 "name": "distribution_value",
-                "type": "Distribution",
-                "oneof_parent": "value"
+                "type": "Distribution"
               }
             ],
             "maps": [
@@ -6537,14 +6425,12 @@
               {
                 "id": 5,
                 "name": "traffic_percent_strategy",
-                "type": "TrafficPercentStrategy",
-                "oneof_parent": "strategy"
+                "type": "TrafficPercentStrategy"
               },
               {
                 "id": 200,
                 "name": "delete_service_strategy",
-                "type": "DeleteServiceStrategy",
-                "oneof_parent": "strategy"
+                "type": "DeleteServiceStrategy"
               },
               {
                 "id": 8,
@@ -9361,38 +9247,32 @@
               {
                 "id": 1,
                 "name": "null_value",
-                "type": "NullValue",
-                "oneof_parent": "kind"
+                "type": "NullValue"
               },
               {
                 "id": 2,
                 "name": "number_value",
-                "type": "double",
-                "oneof_parent": "kind"
+                "type": "double"
               },
               {
                 "id": 3,
                 "name": "string_value",
-                "type": "string",
-                "oneof_parent": "kind"
+                "type": "string"
               },
               {
                 "id": 4,
                 "name": "bool_value",
-                "type": "bool",
-                "oneof_parent": "kind"
+                "type": "bool"
               },
               {
                 "id": 5,
                 "name": "struct_value",
-                "type": "Struct",
-                "oneof_parent": "kind"
+                "type": "Struct"
               },
               {
                 "id": 6,
                 "name": "list_value",
-                "type": "ListValue",
-                "oneof_parent": "kind"
+                "type": "ListValue"
               }
             ]
           },
@@ -10315,32 +10195,27 @@
               {
                 "id": 1,
                 "name": "oneof_int32_value",
-                "type": "int32",
-                "oneof_parent": "oneof_value"
+                "type": "int32"
               },
               {
                 "id": 2,
                 "name": "oneof_string_value",
-                "type": "string",
-                "oneof_parent": "oneof_value"
+                "type": "string"
               },
               {
                 "id": 3,
                 "name": "oneof_bytes_value",
-                "type": "bytes",
-                "oneof_parent": "oneof_value"
+                "type": "bytes"
               },
               {
                 "id": 4,
                 "name": "oneof_enum_value",
-                "type": "EnumType",
-                "oneof_parent": "oneof_value"
+                "type": "EnumType"
               },
               {
                 "id": 5,
                 "name": "oneof_message_value",
-                "type": "MessageType",
-                "oneof_parent": "oneof_value"
+                "type": "MessageType"
               }
             ]
           },
@@ -12018,38 +11893,32 @@
               {
                 "id": 1,
                 "name": "float",
-                "type": "FloatRules",
-                "oneof_parent": "type"
+                "type": "FloatRules"
               },
               {
                 "id": 2,
                 "name": "double",
-                "type": "DoubleRules",
-                "oneof_parent": "type"
+                "type": "DoubleRules"
               },
               {
                 "id": 3,
                 "name": "string",
-                "type": "StringRules",
-                "oneof_parent": "type"
+                "type": "StringRules"
               },
               {
                 "id": 4,
                 "name": "bool",
-                "type": "BoolRules",
-                "oneof_parent": "type"
+                "type": "BoolRules"
               },
               {
                 "id": 5,
                 "name": "int32",
-                "type": "Int32Rules",
-                "oneof_parent": "type"
+                "type": "Int32Rules"
               },
               {
                 "id": 6,
                 "name": "int64",
-                "type": "Int64Rules",
-                "oneof_parent": "type"
+                "type": "Int64Rules"
               }
             ]
           },
@@ -35995,8 +35864,7 @@
               {
                 "id": 2,
                 "name": "cluster",
-                "type": "string",
-                "oneof_parent": "http_upstream_type"
+                "type": "string"
               },
               {
                 "id": 3,
@@ -36011,20 +35879,17 @@
               {
                 "id": 1,
                 "name": "filename",
-                "type": "string",
-                "oneof_parent": "specifier"
+                "type": "string"
               },
               {
                 "id": 2,
                 "name": "inline_bytes",
-                "type": "bytes",
-                "oneof_parent": "specifier"
+                "type": "bytes"
               },
               {
                 "id": 3,
                 "name": "inline_string",
-                "type": "string",
-                "oneof_parent": "specifier"
+                "type": "string"
               }
             ]
           },
@@ -36045,14 +35910,12 @@
               {
                 "id": 3,
                 "name": "remote_jwks",
-                "type": "RemoteJwks",
-                "oneof_parent": "jwks_source_specifier"
+                "type": "RemoteJwks"
               },
               {
                 "id": 4,
                 "name": "local_jwks",
-                "type": "DataSource",
-                "oneof_parent": "jwks_source_specifier"
+                "type": "DataSource"
               },
               {
                 "id": 5,
@@ -37709,14 +37572,12 @@
                   {
                     "id": 1,
                     "name": "pem",
-                    "type": "string",
-                    "oneof_parent": "certificate_data"
+                    "type": "string"
                   },
                   {
                     "id": 2,
                     "name": "spiffe_bundle_url",
-                    "type": "string",
-                    "oneof_parent": "certificate_data"
+                    "type": "string"
                   },
                   {
                     "id": 3,
@@ -37796,20 +37657,17 @@
                   {
                     "id": 2,
                     "name": "envoy_ext_authz_http",
-                    "type": "EnvoyExternalAuthorizationHttpProvider",
-                    "oneof_parent": "provider"
+                    "type": "EnvoyExternalAuthorizationHttpProvider"
                   },
                   {
                     "id": 3,
                     "name": "envoy_ext_authz_grpc",
-                    "type": "EnvoyExternalAuthorizationGrpcProvider",
-                    "oneof_parent": "provider"
+                    "type": "EnvoyExternalAuthorizationGrpcProvider"
                   },
                   {
                     "id": 4,
                     "name": "zipkin",
-                    "type": "ZipkinTracingProvider",
-                    "oneof_parent": "provider"
+                    "type": "ZipkinTracingProvider"
                   },
                   {
                     "id": 5,
@@ -37820,20 +37678,17 @@
                         "name": "deprecated",
                         "value": "true"
                       }
-                    ],
-                    "oneof_parent": "provider"
+                    ]
                   },
                   {
                     "id": 6,
                     "name": "datadog",
-                    "type": "DatadogTracingProvider",
-                    "oneof_parent": "provider"
+                    "type": "DatadogTracingProvider"
                   },
                   {
                     "id": 7,
                     "name": "stackdriver",
-                    "type": "StackdriverProvider",
-                    "oneof_parent": "provider"
+                    "type": "StackdriverProvider"
                   },
                   {
                     "id": 8,
@@ -37844,50 +37699,42 @@
                         "name": "deprecated",
                         "value": "true"
                       }
-                    ],
-                    "oneof_parent": "provider"
+                    ]
                   },
                   {
                     "id": 9,
                     "name": "skywalking",
-                    "type": "SkyWalkingTracingProvider",
-                    "oneof_parent": "provider"
+                    "type": "SkyWalkingTracingProvider"
                   },
                   {
                     "id": 15,
                     "name": "opentelemetry",
-                    "type": "OpenTelemetryTracingProvider",
-                    "oneof_parent": "provider"
+                    "type": "OpenTelemetryTracingProvider"
                   },
                   {
                     "id": 10,
                     "name": "prometheus",
-                    "type": "PrometheusMetricsProvider",
-                    "oneof_parent": "provider"
+                    "type": "PrometheusMetricsProvider"
                   },
                   {
                     "id": 11,
                     "name": "envoy_file_access_log",
-                    "type": "EnvoyFileAccessLogProvider",
-                    "oneof_parent": "provider"
+                    "type": "EnvoyFileAccessLogProvider"
                   },
                   {
                     "id": 12,
                     "name": "envoy_http_als",
-                    "type": "EnvoyHttpGrpcV3LogProvider",
-                    "oneof_parent": "provider"
+                    "type": "EnvoyHttpGrpcV3LogProvider"
                   },
                   {
                     "id": 13,
                     "name": "envoy_tcp_als",
-                    "type": "EnvoyTcpGrpcV3LogProvider",
-                    "oneof_parent": "provider"
+                    "type": "EnvoyTcpGrpcV3LogProvider"
                   },
                   {
                     "id": 14,
                     "name": "envoy_otel_als",
-                    "type": "EnvoyOpenTelemetryLogProvider",
-                    "oneof_parent": "provider"
+                    "type": "EnvoyOpenTelemetryLogProvider"
                   }
                 ],
                 "messages": [
@@ -38246,14 +38093,12 @@
                           {
                             "id": 1,
                             "name": "text",
-                            "type": "string",
-                            "oneof_parent": "log_format"
+                            "type": "string"
                           },
                           {
                             "id": 2,
                             "name": "labels",
-                            "type": "google.protobuf.Struct",
-                            "oneof_parent": "log_format"
+                            "type": "google.protobuf.Struct"
                           }
                         ]
                       }
@@ -38630,14 +38475,12 @@
                   {
                     "id": 1,
                     "name": "from_cidr",
-                    "type": "string",
-                    "oneof_parent": "ne"
+                    "type": "string"
                   },
                   {
                     "id": 2,
                     "name": "from_registry",
-                    "type": "string",
-                    "oneof_parent": "ne"
+                    "type": "string"
                   }
                 ]
               },
@@ -38647,14 +38490,12 @@
                   {
                     "id": 1,
                     "name": "registry_service_name",
-                    "type": "string",
-                    "oneof_parent": "gw"
+                    "type": "string"
                   },
                   {
                     "id": 2,
                     "name": "address",
-                    "type": "string",
-                    "oneof_parent": "gw"
+                    "type": "string"
                   },
                   {
                     "id": 3,
@@ -38836,32 +38677,27 @@
               {
                 "id": 1,
                 "name": "zipkin",
-                "type": "Zipkin",
-                "oneof_parent": "tracer"
+                "type": "Zipkin"
               },
               {
                 "id": 2,
                 "name": "lightstep",
-                "type": "Lightstep",
-                "oneof_parent": "tracer"
+                "type": "Lightstep"
               },
               {
                 "id": 3,
                 "name": "datadog",
-                "type": "Datadog",
-                "oneof_parent": "tracer"
+                "type": "Datadog"
               },
               {
                 "id": 4,
                 "name": "stackdriver",
-                "type": "Stackdriver",
-                "oneof_parent": "tracer"
+                "type": "Stackdriver"
               },
               {
                 "id": 9,
                 "name": "open_census_agent",
-                "type": "OpenCensusAgent",
-                "oneof_parent": "tracer"
+                "type": "OpenCensusAgent"
               },
               {
                 "id": 6,
@@ -38972,20 +38808,17 @@
                   {
                     "id": 1,
                     "name": "literal",
-                    "type": "Literal",
-                    "oneof_parent": "type"
+                    "type": "Literal"
                   },
                   {
                     "id": 2,
                     "name": "environment",
-                    "type": "Environment",
-                    "oneof_parent": "type"
+                    "type": "Environment"
                   },
                   {
                     "id": 3,
                     "name": "header",
-                    "type": "RequestHeader",
-                    "oneof_parent": "type"
+                    "type": "RequestHeader"
                   }
                 ]
               },
@@ -39077,14 +38910,12 @@
               {
                 "id": 2,
                 "name": "cryptomb",
-                "type": "CryptoMb",
-                "oneof_parent": "provider"
+                "type": "CryptoMb"
               },
               {
                 "id": 3,
                 "name": "qat",
-                "type": "QAT",
-                "oneof_parent": "provider"
+                "type": "QAT"
               }
             ],
             "messages": [
@@ -39136,14 +38967,12 @@
               {
                 "id": 3,
                 "name": "service_cluster",
-                "type": "string",
-                "oneof_parent": "cluster_name"
+                "type": "string"
               },
               {
                 "id": 36,
                 "name": "tracing_service_name",
-                "type": "TracingServiceName",
-                "oneof_parent": "cluster_name"
+                "type": "TracingServiceName"
               },
               {
                 "id": 4,
@@ -39880,14 +39709,12 @@
               {
                 "id": 1,
                 "name": "simple",
-                "type": "SimpleLB",
-                "oneof_parent": "lb_policy"
+                "type": "SimpleLB"
               },
               {
                 "id": 2,
                 "name": "consistent_hash",
-                "type": "ConsistentHashLB",
-                "oneof_parent": "lb_policy"
+                "type": "ConsistentHashLB"
               },
               {
                 "id": 3,
@@ -39907,38 +39734,32 @@
                   {
                     "id": 1,
                     "name": "http_header_name",
-                    "type": "string",
-                    "oneof_parent": "hash_key"
+                    "type": "string"
                   },
                   {
                     "id": 2,
                     "name": "http_cookie",
-                    "type": "HTTPCookie",
-                    "oneof_parent": "hash_key"
+                    "type": "HTTPCookie"
                   },
                   {
                     "id": 3,
                     "name": "use_source_ip",
-                    "type": "bool",
-                    "oneof_parent": "hash_key"
+                    "type": "bool"
                   },
                   {
                     "id": 5,
                     "name": "http_query_parameter_name",
-                    "type": "string",
-                    "oneof_parent": "hash_key"
+                    "type": "string"
                   },
                   {
                     "id": 6,
                     "name": "ring_hash",
-                    "type": "RingHash",
-                    "oneof_parent": "hash_algorithm"
+                    "type": "RingHash"
                   },
                   {
                     "id": 7,
                     "name": "maglev",
-                    "type": "MagLev",
-                    "oneof_parent": "hash_algorithm"
+                    "type": "MagLev"
                   },
                   {
                     "id": 4,
@@ -40731,20 +40552,17 @@
                   {
                     "id": 3,
                     "name": "listener",
-                    "type": "ListenerMatch",
-                    "oneof_parent": "object_types"
+                    "type": "ListenerMatch"
                   },
                   {
                     "id": 4,
                     "name": "route_configuration",
-                    "type": "RouteConfigurationMatch",
-                    "oneof_parent": "object_types"
+                    "type": "RouteConfigurationMatch"
                   },
                   {
                     "id": 5,
                     "name": "cluster",
-                    "type": "ClusterMatch",
-                    "oneof_parent": "object_types"
+                    "type": "ClusterMatch"
                   }
                 ]
               },
@@ -42015,14 +41833,12 @@
               {
                 "id": 4,
                 "name": "port",
-                "type": "uint32",
-                "oneof_parent": "redirect_port"
+                "type": "uint32"
               },
               {
                 "id": 5,
                 "name": "derive_port",
-                "type": "RedirectPortSelection",
-                "oneof_parent": "redirect_port"
+                "type": "RedirectPortSelection"
               },
               {
                 "id": 6,
@@ -42063,14 +41879,12 @@
               {
                 "id": 1,
                 "name": "string",
-                "type": "string",
-                "oneof_parent": "specifier"
+                "type": "string"
               },
               {
                 "id": 2,
                 "name": "bytes",
-                "type": "bytes",
-                "oneof_parent": "specifier"
+                "type": "bytes"
               }
             ]
           },
@@ -42115,20 +41929,17 @@
               {
                 "id": 1,
                 "name": "exact",
-                "type": "string",
-                "oneof_parent": "match_type"
+                "type": "string"
               },
               {
                 "id": 2,
                 "name": "prefix",
-                "type": "string",
-                "oneof_parent": "match_type"
+                "type": "string"
               },
               {
                 "id": 3,
                 "name": "regex",
-                "type": "string",
-                "oneof_parent": "match_type"
+                "type": "string"
               }
             ]
           },
@@ -42240,14 +42051,12 @@
                   {
                     "id": 2,
                     "name": "fixed_delay",
-                    "type": "google.protobuf.Duration",
-                    "oneof_parent": "http_delay_type"
+                    "type": "google.protobuf.Duration"
                   },
                   {
                     "id": 3,
                     "name": "exponential_delay",
-                    "type": "google.protobuf.Duration",
-                    "oneof_parent": "http_delay_type"
+                    "type": "google.protobuf.Duration"
                   },
                   {
                     "id": 5,
@@ -42262,20 +42071,17 @@
                   {
                     "id": 2,
                     "name": "http_status",
-                    "type": "int32",
-                    "oneof_parent": "error_type"
+                    "type": "int32"
                   },
                   {
                     "id": 3,
                     "name": "grpc_status",
-                    "type": "string",
-                    "oneof_parent": "error_type"
+                    "type": "string"
                   },
                   {
                     "id": 4,
                     "name": "http2_error",
-                    "type": "string",
-                    "oneof_parent": "error_type"
+                    "type": "string"
                   },
                   {
                     "id": 5,
@@ -42349,6 +42155,49 @@
           },
           {
             "path": "google/protobuf/wrappers.proto"
+          }
+        ],
+        "package": {
+          "name": "istio.networking.v1alpha3"
+        },
+        "options": [
+          {
+            "name": "go_package",
+            "value": "istio.io/api/networking/v1alpha3"
+          }
+        ]
+      }
+    },
+    {
+      "protopath": "networking:/:v1alpha3:/:waypoint.proto",
+      "def": {
+        "messages": [
+          {
+            "name": "Waypoint",
+            "fields": [
+              {
+                "id": 1,
+                "name": "class",
+                "type": "string"
+              }
+            ]
+          }
+        ],
+        "imports": [
+          {
+            "path": "google/api/field_behavior.proto"
+          },
+          {
+            "path": "google/protobuf/duration.proto"
+          },
+          {
+            "path": "google/protobuf/wrappers.proto"
+          },
+          {
+            "path": "networking/v1alpha3/virtual_service.proto"
+          },
+          {
+            "path": "type/v1beta1/selector.proto"
           }
         ],
         "package": {
@@ -42510,20 +42359,17 @@
               {
                 "id": 7,
                 "name": "http_get",
-                "type": "HTTPHealthCheckConfig",
-                "oneof_parent": "health_check_method"
+                "type": "HTTPHealthCheckConfig"
               },
               {
                 "id": 8,
                 "name": "tcp_socket",
-                "type": "TCPHealthCheckConfig",
-                "oneof_parent": "health_check_method"
+                "type": "TCPHealthCheckConfig"
               },
               {
                 "id": 9,
                 "name": "exec",
-                "type": "ExecHealthCheckConfig",
-                "oneof_parent": "health_check_method"
+                "type": "ExecHealthCheckConfig"
               }
             ]
           },
@@ -42909,14 +42755,12 @@
               {
                 "id": 1,
                 "name": "simple",
-                "type": "SimpleLB",
-                "oneof_parent": "lb_policy"
+                "type": "SimpleLB"
               },
               {
                 "id": 2,
                 "name": "consistent_hash",
-                "type": "ConsistentHashLB",
-                "oneof_parent": "lb_policy"
+                "type": "ConsistentHashLB"
               },
               {
                 "id": 3,
@@ -42936,38 +42780,32 @@
                   {
                     "id": 1,
                     "name": "http_header_name",
-                    "type": "string",
-                    "oneof_parent": "hash_key"
+                    "type": "string"
                   },
                   {
                     "id": 2,
                     "name": "http_cookie",
-                    "type": "HTTPCookie",
-                    "oneof_parent": "hash_key"
+                    "type": "HTTPCookie"
                   },
                   {
                     "id": 3,
                     "name": "use_source_ip",
-                    "type": "bool",
-                    "oneof_parent": "hash_key"
+                    "type": "bool"
                   },
                   {
                     "id": 5,
                     "name": "http_query_parameter_name",
-                    "type": "string",
-                    "oneof_parent": "hash_key"
+                    "type": "string"
                   },
                   {
                     "id": 6,
                     "name": "ring_hash",
-                    "type": "RingHash",
-                    "oneof_parent": "hash_algorithm"
+                    "type": "RingHash"
                   },
                   {
                     "id": 7,
                     "name": "maglev",
-                    "type": "MagLev",
-                    "oneof_parent": "hash_algorithm"
+                    "type": "MagLev"
                   },
                   {
                     "id": 4,
@@ -44631,14 +44469,12 @@
               {
                 "id": 4,
                 "name": "port",
-                "type": "uint32",
-                "oneof_parent": "redirect_port"
+                "type": "uint32"
               },
               {
                 "id": 5,
                 "name": "derive_port",
-                "type": "RedirectPortSelection",
-                "oneof_parent": "redirect_port"
+                "type": "RedirectPortSelection"
               },
               {
                 "id": 6,
@@ -44679,14 +44515,12 @@
               {
                 "id": 1,
                 "name": "string",
-                "type": "string",
-                "oneof_parent": "specifier"
+                "type": "string"
               },
               {
                 "id": 2,
                 "name": "bytes",
-                "type": "bytes",
-                "oneof_parent": "specifier"
+                "type": "bytes"
               }
             ]
           },
@@ -44731,20 +44565,17 @@
               {
                 "id": 1,
                 "name": "exact",
-                "type": "string",
-                "oneof_parent": "match_type"
+                "type": "string"
               },
               {
                 "id": 2,
                 "name": "prefix",
-                "type": "string",
-                "oneof_parent": "match_type"
+                "type": "string"
               },
               {
                 "id": 3,
                 "name": "regex",
-                "type": "string",
-                "oneof_parent": "match_type"
+                "type": "string"
               }
             ]
           },
@@ -44856,14 +44687,12 @@
                   {
                     "id": 2,
                     "name": "fixed_delay",
-                    "type": "google.protobuf.Duration",
-                    "oneof_parent": "http_delay_type"
+                    "type": "google.protobuf.Duration"
                   },
                   {
                     "id": 3,
                     "name": "exponential_delay",
-                    "type": "google.protobuf.Duration",
-                    "oneof_parent": "http_delay_type"
+                    "type": "google.protobuf.Duration"
                   },
                   {
                     "id": 5,
@@ -44878,20 +44707,17 @@
                   {
                     "id": 2,
                     "name": "http_status",
-                    "type": "int32",
-                    "oneof_parent": "error_type"
+                    "type": "int32"
                   },
                   {
                     "id": 3,
                     "name": "grpc_status",
-                    "type": "string",
-                    "oneof_parent": "error_type"
+                    "type": "string"
                   },
                   {
                     "id": 4,
                     "name": "http2_error",
-                    "type": "string",
-                    "oneof_parent": "error_type"
+                    "type": "string"
                   },
                   {
                     "id": 5,
@@ -45126,20 +44952,17 @@
               {
                 "id": 7,
                 "name": "http_get",
-                "type": "HTTPHealthCheckConfig",
-                "oneof_parent": "health_check_method"
+                "type": "HTTPHealthCheckConfig"
               },
               {
                 "id": 8,
                 "name": "tcp_socket",
-                "type": "TCPHealthCheckConfig",
-                "oneof_parent": "health_check_method"
+                "type": "TCPHealthCheckConfig"
               },
               {
                 "id": 9,
                 "name": "exec",
-                "type": "ExecHealthCheckConfig",
-                "oneof_parent": "health_check_method"
+                "type": "ExecHealthCheckConfig"
               }
             ]
           },
@@ -47226,8 +47049,7 @@
               {
                 "id": 4,
                 "name": "provider",
-                "type": "ExtensionProvider",
-                "oneof_parent": "action_detail"
+                "type": "ExtensionProvider"
               }
             ],
             "messages": [
@@ -47739,8 +47561,7 @@
               {
                 "id": 4,
                 "name": "provider",
-                "type": "ExtensionProvider",
-                "oneof_parent": "action_detail"
+                "type": "ExtensionProvider"
               }
             ],
             "messages": [
@@ -48423,20 +48244,17 @@
                   {
                     "id": 1,
                     "name": "literal",
-                    "type": "Literal",
-                    "oneof_parent": "type"
+                    "type": "Literal"
                   },
                   {
                     "id": 2,
                     "name": "environment",
-                    "type": "Environment",
-                    "oneof_parent": "type"
+                    "type": "Environment"
                   },
                   {
                     "id": 3,
                     "name": "header",
-                    "type": "RequestHeader",
-                    "oneof_parent": "type"
+                    "type": "RequestHeader"
                   }
                 ]
               },
@@ -48544,14 +48362,12 @@
               {
                 "id": 1,
                 "name": "metric",
-                "type": "IstioMetric",
-                "oneof_parent": "metric_match"
+                "type": "IstioMetric"
               },
               {
                 "id": 2,
                 "name": "custom_metric",
-                "type": "string",
-                "oneof_parent": "metric_match"
+                "type": "string"
               },
               {
                 "id": 3,
